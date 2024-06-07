@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->integer('height');
             $table->integer('weight');
             $table->enum('objectif', ['Lose Weight', 'Gain Weight']);
+            $table->float('calories_needed' , 8,2);
             $table->rememberToken(); // Add this line to include remember_token column
             $table->timestamps();
         });

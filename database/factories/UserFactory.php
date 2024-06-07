@@ -22,6 +22,7 @@ class UserFactory extends Factory
             'height' => $this->faker->numberBetween(150, 200),
             'weight' => $this->faker->numberBetween(50, 100),
             'objectif' => $this->faker->randomElement(['Lose Weight', 'Gain Weight']),
+            'calories_needed'=>$this->faker->numberBetween(500,5000),
             'remember_token' => Str::random(10),
         ];
     }
