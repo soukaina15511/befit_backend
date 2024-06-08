@@ -15,6 +15,7 @@ class MealFactory extends Factory
         return [
             'user_id' => User::factory(),
             'name' => $this->faker->word,
+            'calories'=>$this->faker->numberBetween(500 , 5000),
         ];
     }
 }

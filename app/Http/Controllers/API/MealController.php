@@ -20,6 +20,7 @@ class MealController extends Controller
         $request->validate([
             'user_id' => 'required|exists:users,id',
             'name' => 'required',
+            'calories'=>'required|integer',
         ]);
 
         $meal = Meal::create($request->all());
@@ -35,6 +36,8 @@ class MealController extends Controller
     {
         $request->validate([
             'name' => 'required',
+            'calories'=>'required',
+
         ]);
 
         $meal->update($request->all());

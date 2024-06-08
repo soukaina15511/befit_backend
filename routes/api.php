@@ -12,6 +12,8 @@ use App\Http\Controllers\API\UserController;
 use App\Http\Controllers\API\UserPreferenceController;
 use App\Http\Controllers\API\WorkoutController;
 use App\Http\Controllers\API\ObjectifController;
+use App\Http\Controllers\API\CaloryController;
+
 use App\Models\FoodItem;
 
 // Routes requiring authentication via Sanctum

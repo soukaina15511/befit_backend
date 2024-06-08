@@ -29,4 +29,8 @@ class FoodItem extends Model
     {
         return $this->hasMany(MealItem::class);
     }
+    public function meals()
+{
+    return $this->belongsToMany(Meal::class);
+}
 }

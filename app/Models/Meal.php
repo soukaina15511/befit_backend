@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Meal extends Model
 {
     use HasFactory ;
-    protected $fillable = ['user_id', 'name'];
+    protected $fillable = ['user_id', 'name', 'calories'];
 
     public function user()
     {
@@ -19,4 +19,8 @@ class Meal extends Model
     {
         return $this->hasMany(MealItem::class);
     }
+    public function foodItems()
+{
+    return $this->belongsToMany(FoodItem::class);
+}
 }
